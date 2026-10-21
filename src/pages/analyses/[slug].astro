@@ -5,13 +5,13 @@ import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
   const analyses = await getCollection('analyses');
   return analyses.map(entry => ({
-    params: { slug: entry.id }, // Astro v6 uses entry.id, not entry.slug
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry); // Astro v6 uses this instead of entry.render()
+const { Content } = await render(entry);
 ---
 
 <BaseLayout title={`${entry.data.title} — Project Kaname`}>
@@ -38,20 +38,17 @@ const { Content } = await render(entry); // Astro v6 uses this instead of entry.
     margin: 0 auto;
     padding: var(--space-xl) var(--space-lg);
   }
-
   .article-header {
     margin-bottom: var(--space-xl);
     border-bottom: 1px solid var(--border);
     padding-bottom: var(--space-md);
   }
-
   .article-header h1 {
     font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: var(--space-sm);
     line-height: 1.2;
   }
-
   .article-meta-row {
     display: flex;
     align-items: center;
@@ -61,24 +58,19 @@ const { Content } = await render(entry); // Astro v6 uses this instead of entry.
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
-
   .meta {
     color: var(--text-soft);
     margin: 0;
   }
-
   .meta::after {
     content: "•";
     margin-left: var(--space-sm);
     color: var(--text-soft);
   }
-
   .article-author {
     color: var(--accent);
     margin: 0;
   }
-
-  /* MARKDOWN TYPOGRAPHY */
   .article-body :global(p) {
     font-family: var(--font-body);
     font-size: 1.15rem;
@@ -87,12 +79,10 @@ const { Content } = await render(entry); // Astro v6 uses this instead of entry.
     color: var(--text);
     max-width: 100%;
   }
-
   .article-body :global(p + p) {
     text-indent: 1.5em;
     margin-bottom: var(--space-md);
   }
-
   .article-body :global(h2) {
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -100,7 +90,6 @@ const { Content } = await render(entry); // Astro v6 uses this instead of entry.
     margin-bottom: var(--space-md);
     color: var(--text);
   }
-
   .article-body :global(h2::before) {
     content: "■";
     color: var(--accent);
@@ -108,7 +97,6 @@ const { Content } = await render(entry); // Astro v6 uses this instead of entry.
     font-size: 0.8em;
     vertical-align: middle;
   }
-
   .article-body :global(p:first-of-type::first-letter) {
     font-family: var(--font-body);
     font-size: 4em;
