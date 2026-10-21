@@ -1,6 +1,4 @@
-___
 
-## title: Kaname - Core Concept aliases: [Project Kaname, Kaname Core, Kaname Expander] type: core-concept status: draft created: 2026-10-18 tags: [kaname, core-concept, philosophy, media-analysis]
 
 # 要 Kaname: Core Concept
 
