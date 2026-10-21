@@ -18,7 +18,8 @@ const sortedAnalyses = allAnalyses.sort(
         {sortedAnalyses.map((analysis) => (
           <article class="grid-card">
             <h2>
-              <a href={`${base}analyses/${analysis.id}`}>{analysis.data.title}</a>
+              <!-- FIXED: Added / after base -->
+              <a href={`${base}/analyses/${analysis.id}`}>{analysis.data.title}</a>
             </h2>
             <p class="meta">
               {analysis.data.date.toLocaleDateString()} · {analysis.data.category}
