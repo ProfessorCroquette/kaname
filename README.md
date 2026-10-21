@@ -126,18 +126,9 @@ Each lens is a doorway, not a verdict. Link a note to each as you build them (e.
 
 ---
 
-## 8. Site Roadmap
-
-- [ ] **Stage 1:** Plain HTML/CSS page, one analysis written by hand
-- [ ] **Stage 2:** Move analyses to Markdown files
-- [ ] **Stage 3:** Adopt a static site generator (Astro / Hugo / Eleventy)
-- [ ] **Stage 4:** Tags for medium, school of thought, thinker
-- [ ] **Stage 5:** Bibliography page and cross-links between analyses
-- [ ] **Stage 6:** Deploy (GitHub Pages / Netlify / Cloudflare Pages)
-
 ---
 
-## 9. Open Questions
+## 8. Open Questions
 
 - What tone: academic, essayistic, or conversational?
 - Do I write in one language or more?
@@ -146,7 +137,7 @@ Each lens is a doorway, not a verdict. Link a note to each as you build them (e.
 
 ---
 
-## 10. Log
+## 9. Log
 
 |Date|Note|
 |---|---|
