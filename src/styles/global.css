@@ -1,0 +1,109 @@
+/* ============================================
+   1. RESET
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   2. DESIGN TOKENS (Midnight Library Theme)
+   ============================================ */
+:root {
+  color-scheme: dark;
+
+  /* Colors — 60-30-10 Rule */
+  --bg:           #0f0c1d;
+  --surface:      #1a1533;
+  --text:         #ece8ff;
+  --text-soft:    #a39fc4;
+  --border:       #2a2447;
+
+  --accent:       #a9a5ff;
+  --accent-hover: #6ee7c8;
+  --on-accent:    #0f0c1d;
+
+  /* Typography */
+  --font-body:    "Source Serif 4", Georgia, serif;
+  --font-heading: "Inter", sans-serif;
+  --font-mono:    "Fragment Mono", monospace;
+
+  /* Spacing Scale */
+  --space-sm:     0.5rem;
+  --space-md:     1rem;
+  --space-lg:     2rem;
+  --space-xl:     4rem;
+
+  /* Layout */
+  --measure:      65ch;
+  --radius:       4px;
+}
+
+/* ============================================
+   3. BASE TYPOGRAPHY
+   ============================================ */
+body {
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+h1 { font-size: 4rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+  margin-bottom: var(--space-md);
+  max-width: var(--measure);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* ============================================
+   4. UTILITY CLASSES
+   ============================================ */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section {
+  padding: var(--space-xl) var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.section h2 {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ============================================
+   5. MEDIA QUERIES
+   ============================================ */
+@media (max-width: 600px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.75rem; }
+}
