@@ -26,7 +26,8 @@ const latest = sortedAnalyses[0];
       {latest && (
         <article class="home-card">
           <h3>
-            <a href={`${base}analyses/${latest.id}`}>
+            <!-- FIXED: Added / after base -->
+            <a href={`${base}/analyses/${latest.id}`}>
               {latest.data.title}
             </a>
           </h3>
@@ -76,7 +77,7 @@ const latest = sortedAnalyses[0];
     background-color: #0f0c1d;
     background-image:
       linear-gradient(rgba(15, 12, 29, 0.7), rgba(15, 12, 29, 0.9)),
-      url('/images/madoka.gif');
+      url('/kaname/images/madoka.gif');
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid var(--border);
